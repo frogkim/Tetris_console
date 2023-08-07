@@ -1,0 +1,4 @@
+﻿  main.c
+main.obj : error LNK2005: c_left_margin이(가) drawing.obj에 이미 정의되어 있습니다.
+main.obj : error LNK2005: c_top_margin이(가) drawing.obj에 이미 정의되어 있습니다.
+D:\github\Tetris\x64\Debug\Tetris.exe : fatal error LNK1169: 여러 번 정의된 기호가 있습니다.
