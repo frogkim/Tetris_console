@@ -21,6 +21,12 @@
     <ClCompile Include="drawing.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="block.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="key_manager.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="drawing.h">

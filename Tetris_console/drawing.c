@@ -1,8 +1,12 @@
 #include "drawing.h"
-const WCHAR c_block = 0x2588;
 
-HANDLE h_in;
-HANDLE h_out;
+static const WCHAR c_block = 0x2588;
+
+static const int c_left_margin = 20;
+static const int c_top_margin = 5;
+
+static HANDLE h_in;
+static HANDLE h_out;
 
 // set window
 void Windows_Init(void)
@@ -54,7 +58,7 @@ void Clear_menu(void)
     // close menu and restore last screen
 }
 
-void Draw_difference(void) 
+void Draw(void) 
 {
     //typedef dot_t frame_block_t[FRAME_WIDTH][FRAME_HEIGHT];
     //frame_block_t* frame_block = mem_play_ground;

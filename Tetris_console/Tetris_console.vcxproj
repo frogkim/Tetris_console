@@ -127,7 +127,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="block.c" />
     <ClCompile Include="drawing.c" />
+    <ClCompile Include="key_manager.c" />
     <ClCompile Include="main.c" />
   </ItemGroup>
   <ItemGroup>

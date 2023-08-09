@@ -1,4 +1,3 @@
-#include "header.h"
 #include "drawing.h"
 
 #include <stdio.h>
