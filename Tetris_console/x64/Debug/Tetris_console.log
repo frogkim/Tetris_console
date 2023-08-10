@@ -1,4 +1,8 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: 중간 디렉터리(x64\Debug\)에 다른 프로젝트(Tetris.vcxproj)에서 공유하는 파일이 포함되어 있습니다.  이로 인해 잘못된 정리 및 다시 빌드 동작이 수행될 수 있습니다.
+﻿C:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8028: 중간 디렉터리(x64\Debug\)에 다른 프로젝트(Tetris.vcxproj)에서 공유하는 파일이 포함되어 있습니다.  이로 인해 잘못된 정리 및 다시 빌드 동작이 수행될 수 있습니다.
   block.c
-D:\github\Tetris_console\Tetris_console\block.c(6,5): warning C4013: 'memcpy'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-  Tetris_console.vcxproj -> D:\github\Tetris_console\x64\Debug\Tetris_console.exe
+D:\git\Tetris_console\Tetris_console\block.c(62,9): error C2143: 구문 오류: ';'이(가) 'return' 앞에 없습니다.
+D:\git\Tetris_console\Tetris_console\block.c(87,5): warning C4013: 'memcpy'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+  drawing.c
+  key_manager.c
+  main.c
+  코드를 생성하고 있습니다...
