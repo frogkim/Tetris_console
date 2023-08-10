@@ -1,9 +1,53 @@
 #include "header.h"
 
-void set_block(void)
+// helper functions
+static int* get_block(int type);
+static void rotate_block(void);
+static void move_block(key_t key);
+
+// define functions
+void Init_block(void)
 {
 
 }
+
+void DeInit_block(void)
+{
+
+}
+
+
+int* get_block_or_null(int type) 
+{
+    ;
+    switch (type) {
+    case 0:
+        int** ret = { {0, 0, 1, 0},
+                     {0, 0, 1, 0},
+                     {0, 0, 1, 0},
+                     {0, 0, 1, 0} };
+        return ret;
+    default:
+        break;
+    }
+    return NULL;
+}
+
+
+dot_t block[BLOCK_TYPE][BLOCK_DIRECTION][BLOCK_SIZE][BLOCK_SIZE] = {
+    { {0, 0}, {0, 0}, {1, 0}, {0, 0} },
+    { {0, 0}, {0, 0}, {1, 0}, {0, 0} },
+    { {0, 0}, {0, 0}, {1, 0}, {0, 0} },
+    { {0, 0}, {0, 0}, {1, 0}, {0, 0} }
+};
+
+dot_t block_2[BLOCK_DIRECTION][BLOCK_SIZE][BLOCK_SIZE] = {
+    { {0, 0}, {0, 0}, {0, 0}, {0, 0} },
+    { {0, 0}, {1, 1}, {1, 1}, {0, 0} },
+    { {0, 0}, {1, 1}, {1, 1}, {0, 0} },
+    { {0, 0}, {0, 0}, {0, 0}, {0, 0} }
+};
+
 
 void rotate_block(void)
 {
