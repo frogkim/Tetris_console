@@ -1,85 +1,46 @@
 #include "header.h"
 // define blocks
-static int block_arr[BLOCK_TYPE][BLOCK_SIZE][BLOCK_SIZE] = {
-                                                            // I block
-                                                           {{0, 0, 1, 0},
-                                                            {0, 0, 1, 0},
-                                                            {0, 0, 1, 0},
-                                                            {0, 0, 1, 0}},
-                                                            // square block
-                                                           {{0, 0, 0, 0},
-                                                            {0, 1, 1, 0},
-                                                            {0, 1, 1, 0},
-                                                            {0, 0, 0, 0}},
-                                                            // T block
-                                                           {{0, 0, 0, 0},
-                                                            {0, 1, 1, 1},
-                                                            {0, 0, 1, 0},
-                                                            {0, 0, 0, 0}},
-                                                            // L block
-                                                           {{0, 1, 0, 0},
-                                                            {0, 1, 0, 0},
-                                                            {0, 1, 1, 0},
-                                                            {0, 0, 0, 0}},
-                                                            // reverse L block
-                                                           {{0, 0, 1, 0},
-                                                            {0, 0, 1, 0},
-                                                            {0, 1, 1, 0},
-                                                            {0, 0, 0, 0}},
-                                                            // 2 block
-                                                           {{0, 0, 0, 0},
-                                                            {0, 1, 1, 0},
-                                                            {0, 0, 1, 1},
-                                                            {0, 0, 0, 0}},
-                                                            // reverse 2 block
-                                                           {{0, 0, 0, 0},
-                                                            {0, 0, 1, 1},
-                                                            {0, 1, 1, 0},
-                                                            {0, 0, 0, 0}}
-};
 
 // helper functions
-static int** get_block_or_null(int type);
+static void set_block(dot_t** dst, int** src, int color);
 static void rotate_block(dot_t** block);
 static void move_block(key_t key);
 
 // define functions
 void Init_block(void)
 {
+    //dot_t g_block[BLOCK_TYPE][BLOCK_DIRECTION][BLOCK_SIZE][BLOCK_SIZE];
 
-}
+    int block_arr[BLOCK_TYPE][BLOCK_SIZE][BLOCK_SIZE] = {
+       {{0, 0, 1, 0}, {0, 0, 1, 0}, {0, 0, 1, 0}, {0, 0, 1, 0}}, // I block
+       {{0, 0, 0, 0}, {0, 1, 1, 0}, {0, 1, 1, 0}, {0, 0, 0, 0}}, // square block
+       {{0, 0, 0, 0}, {0, 1, 1, 1}, {0, 0, 1, 0}, {0, 0, 0, 0}}, // T block
+       {{0, 1, 0, 0}, {0, 1, 0, 0}, {0, 1, 1, 0}, {0, 0, 0, 0}}, // L block
+       {{0, 0, 1, 0}, {0, 0, 1, 0}, {0, 1, 1, 0}, {0, 0, 0, 0}}, // reverse L block
+       {{0, 0, 0, 0}, {0, 1, 1, 0}, {0, 0, 1, 1}, {0, 0, 0, 0}}, // 2 block
+       {{0, 0, 0, 0}, {0, 0, 1, 1}, {0, 1, 1, 0}, {0, 0, 0, 0}}  // reverse 2 block
+    };
+
+    for (int i = 0; i < BLOCK_TYPE; ++i) {
+        memcpy(g_block[i][0], block_arr[i], sizeof(BLOCK_SIZE * BLOCK_SIZE));
+        rotate_block(block_arr[i]);
+        memcpy(g_block[i][1], block_arr[i], sizeof(BLOCK_SIZE * BLOCK_SIZE));
+        rotate_block(block_arr[i]);
+        memcpy(g_block[i][2], block_arr[i], sizeof(BLOCK_SIZE * BLOCK_SIZE));
+        rotate_block(block_arr[i]);
+        memcpy(g_block[i][3], block_arr[i], sizeof(BLOCK_SIZE * BLOCK_SIZE));
+    }
+} // end set block
 
 void DeInit_block(void)
 {
 
 }
 
-
-int** get_block_or_null(int type) 
+void set_block(dot_t** dst, int** src, int color)
 {
-    if (type == 0) {
-        int** ret;
-        return ret;
-    }
 
-    return NULL;
 }
-
-
-dot_t block[BLOCK_TYPE][BLOCK_DIRECTION][BLOCK_SIZE][BLOCK_SIZE] = {
-    { {0, 0}, {0, 0}, {1, 0}, {0, 0} },
-    { {0, 0}, {0, 0}, {1, 0}, {0, 0} },
-    { {0, 0}, {0, 0}, {1, 0}, {0, 0} },
-    { {0, 0}, {0, 0}, {1, 0}, {0, 0} }
-};
-
-dot_t block_2[BLOCK_DIRECTION][BLOCK_SIZE][BLOCK_SIZE] = {
-    { {0, 0}, {0, 0}, {0, 0}, {0, 0} },
-    { {0, 0}, {1, 1}, {1, 1}, {0, 0} },
-    { {0, 0}, {1, 1}, {1, 1}, {0, 0} },
-    { {0, 0}, {0, 0}, {0, 0}, {0, 0} }
-};
-
 
 void rotate_block(dot_t** block)
 {
