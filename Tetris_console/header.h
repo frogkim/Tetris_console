@@ -1,7 +1,6 @@
 #ifndef HEADER_H_
 #define HEADER_H_
-
-#define NULL 0
+#include <windows.h>
 
 #define FRAME_WIDTH     10
 #define FRAME_HEIGHT    20
@@ -14,6 +13,17 @@
 #define KEY_RIGHT   0
 #define KEY_DOWN    0
 
+#define block_color_empty 0
+#define block_color_empty1 1
+#define block_color_empty2 2
+#define block_color_empty3 3
+#define block_color_empty4 4
+#define block_color_empty5 5
+#define block_color_empty6 6
+#define block_color_empty7 7
+#define block_color_edge  8
+
+// typedef
 typedef unsigned char key_t;
 
 typedef struct _dot{
@@ -21,21 +31,13 @@ typedef struct _dot{
     int color;
 } dot_t;
 
-dot_t g_frame[FRAME_WIDTH][FRAME_HEIGHT];
-dot_t g_frame_old[FRAME_WIDTH][FRAME_HEIGHT];
-dot_t g_diff[FRAME_WIDTH][FRAME_HEIGHT];
+//gloval variables
+int current_block;
 
-dot_t g_block[BLOCK_TYPE][BLOCK_DIRECTION][BLOCK_SIZE][BLOCK_SIZE];
+dot_t g_map[FRAME_HEIGHT+1][FRAME_WIDTH + 2];
+CHAR_INFO g_map_console[FRAME_HEIGHT + 1][(FRAME_WIDTH + 2) * 2];
+dot_t g_block_arr[BLOCK_TYPE][BLOCK_DIRECTION][BLOCK_SIZE][BLOCK_SIZE];
 
-/* key functions */
-void set_key(void);
-key_t get_key(void);
-
-/* block functions */
-void Init_block(void);
-void DeInit_block(void);
-void decide_frame(void);
-void calculate_diff(void);
 #endif
 
 

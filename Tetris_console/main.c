@@ -1,11 +1,10 @@
-#include "drawing.h"
-
-#include <stdio.h>
+#include "frame.h"
 
 int main(void)
 {
-    Windows_Init();
-
-    getchar();
-
+    Init_block();
+    Init_Draw();
+    Init_frame();
+    frame_running();
+    return 0;
 }

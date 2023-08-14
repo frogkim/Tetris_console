@@ -1,7 +1,9 @@
 d:\github\tetris_console\tetris_console\x64\debug\vc143.pdb
 d:\github\tetris_console\tetris_console\x64\debug\vc143.idb
 d:\github\tetris_console\tetris_console\x64\debug\main.obj
-d:\github\tetris_console\tetris_console\x64\debug\drawing.obj
+d:\github\tetris_console\tetris_console\x64\debug\frame.obj
+d:\github\tetris_console\tetris_console\x64\debug\draw.obj
+d:\github\tetris_console\tetris_console\x64\debug\block.obj
 d:\github\tetris_console\x64\debug\tetris_console.pdb
 d:\github\tetris_console\tetris_console\x64\debug\tetris_console.tlog\cl.command.1.tlog
 d:\github\tetris_console\tetris_console\x64\debug\tetris_console.tlog\cl.read.1.tlog
