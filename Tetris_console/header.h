@@ -47,7 +47,6 @@ void Draw(void);
 void Init_block(void);
 void Appear_block(void);
 BOOL Move_block(enum_key);
-BOOL Rotate_block(void);
 
 // clock functions
 unsigned long get_count(void);

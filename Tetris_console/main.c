@@ -13,7 +13,7 @@ int main(void)
     Init_block();
     Init_Draw();
     Init_frame();
-
+    Appear_block();
     h_mutex_key = CreateMutex(NULL, FALSE, TEXT("Mutex_Key"));
     h_thread[0] = CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)key_collect_func, (LPVOID)NULL, 0, &ThreadID[0]);
     h_thread[1] = CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)run_func, (LPVOID)NULL, 0, &ThreadID[1]);

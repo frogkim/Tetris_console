@@ -42,5 +42,5 @@ unsigned long get_count(void)
 
 time_t generate_rand(void)
 {
-    return time(get_count());
+    return time(NULL);
 }
