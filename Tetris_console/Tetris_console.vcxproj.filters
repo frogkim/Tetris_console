@@ -27,18 +27,18 @@
     <ClCompile Include="frame.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="frame.h">
+    <ClCompile Include="header_types.h">
       <Filter>헤더 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="clock.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="key.c">
+      <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="draw.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="header.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="block.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

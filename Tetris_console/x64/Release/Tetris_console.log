@@ -1,0 +1,9 @@
+﻿  clock.c
+D:\github\Tetris_console\Tetris_console\clock.c(45,28): warning C4047: '함수': 'time_t *const '의 간접 참조 수준이 'unsigned long'과(와) 다릅니다.
+D:\github\Tetris_console\Tetris_console\clock.c(45,17): warning C4024: 'time': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+  코드를 생성하고 있습니다.
+  5 of 23 functions (21.7%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  코드를 생성했습니다.
+  Tetris_console.vcxproj -> D:\github\Tetris_console\x64\Release\Tetris_console.exe

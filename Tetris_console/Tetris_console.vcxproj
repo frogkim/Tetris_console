@@ -128,15 +128,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="block.c" />
+    <ClCompile Include="clock.c" />
     <ClCompile Include="draw.c" />
-    <ClCompile Include="frame.h" />
     <ClCompile Include="frame.c" />
+    <ClCompile Include="header_types.h" />
+    <ClCompile Include="key.c" />
     <ClCompile Include="main.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="block.h" />
     <ClInclude Include="header.h" />
-    <ClInclude Include="draw.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
