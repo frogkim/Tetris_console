@@ -23,7 +23,7 @@ PTHREAD_START_ROUTINE run_func(void)
         }
 
         if (g_level >= 10) {
-            return -1;
+            return 0;
         }
 
         if (g_key.max != KEY_NOTHING) {
@@ -43,10 +43,11 @@ PTHREAD_START_ROUTINE run_func(void)
 
         Draw();
     } // while end
+
     if (g_game_over) {
         printf("Game Over\n");
         printf("Press Enter\n");
-        getchar();
+        (void)getchar();
     }
 
     return 0;

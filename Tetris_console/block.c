@@ -93,7 +93,7 @@ void set_rotate_block(int block[][BLOCK_SIZE])
 
 void Appear_block(void)
 {
-    srand(generate_rand());
+    srand((unsigned int)generate_rand());
     g_cur_block.x = c_start_x;
     g_cur_block.y = c_start_y;
     g_cur_block.type = rand() % BLOCK_TYPE;

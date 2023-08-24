@@ -6,6 +6,7 @@ DWORD ThreadID[THREADS];
 
 int main(void)
 {
+    
     g_game_over = FALSE;
     g_escape = FALSE;
     g_level = 0;
